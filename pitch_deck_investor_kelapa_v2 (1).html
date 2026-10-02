@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck: Pabrik Kelapa Terintegrasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .slide {
+            min-height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 8%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#22c55e 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 2rem;
+            right: 4rem;
+            font-size: 0.875rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(34, 197, 94, 0.3); /* Green border on hover */
+            transform: translateY(-2px);
+        }
+
+        h1, h2, h3 { font-weight: 800; letter-spacing: -0.025em; }
+        .text-accent { color: #22c55e; } /* Tailwind Green-500 */
+        
+        /* Custom Scrollbar for better look on desktop */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Title -->
+    <section class="slide bg-slate-900 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-4xl z-10">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-green-500/10 text-green-400 text-sm font-semibold mb-6 border border-green-500/20 shadow-[0_0_15px_rgba(34,197,94,0.15)]">
+                <i class="fas fa-rocket mr-2"></i> Peluang Investasi 2026
+            </span>
+            <h1 class="text-5xl md:text-7xl mb-6 leading-tight font-extrabold tracking-tight">
+                Pabrik Kelapa <br><span class="text-accent">Terintegrasi</span>
+            </h1>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-light">
+                Kopra | Briket | Cocofiber | Cocopeat. <br>
+                Memaksimalkan margin dari setiap butir kelapa di Pasangkayu, dari komoditas hulu hingga pasar ekspor.
+            </p>
+            <div class="flex flex-wrap gap-6 mt-4">
+                <div class="glass-card flex-1 min-w-[200px]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-wallet text-slate-400"></i>
+                        <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Kebutuhan Modal</p>
+                    </div>
+                    <p class="text-4xl font-bold text-white">Rp500 Juta</p>
+                    <p class="text-xs text-slate-500 mt-2"><i class="fas fa-info-circle mr-1"></i> Pencairan 1 Kali</p>
+                </div>
+                <div class="glass-card flex-1 min-w-[200px] border-green-500/30 bg-green-900/10 shadow-[0_0_30px_rgba(34,197,94,0.05)]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-chart-pie text-green-400"></i>
+                        <p class="text-sm text-green-400 uppercase tracking-wider font-semibold">Target Payback</p>
+                    </div>
+                    <p class="text-4xl font-bold text-white">± 3 Tahun</p>
+                    <p class="text-xs text-slate-400 mt-2"><i class="fas fa-handshake mr-1"></i> Bagi Hasil 60% Investor (Fase 1)</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">01</div>
+    </section>
+
+    <!-- Slide 2: The Opportunity Hook -->
+    <section class="slide bg-slate-800 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-6xl w-full mx-auto z-10">
+            <div class="mb-12">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Konteks Pasar</span>
+                <h2 class="text-4xl md:text-5xl">Mengapa <span class="text-accent">Sekarang?</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-globe text-6xl text-white"></i></div>
+                    <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-6 border border-green-500/30">
+                        <i class="fas fa-chart-line text-xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl mb-3 text-white font-bold">Permintaan Briket Ekspor Stabil</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pasar global untuk briket arang kelapa berkualitas (shisha/BBQ) di Timur Tengah & Eropa terus membutuhkan pasokan. Harga FOB relatif terjaga.</p>
+                </div>
+                
+                <div class="glass-card relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-map text-6xl text-white"></i></div>
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-6 border border-blue-500/30">
+                        <i class="fas fa-map-marker-alt text-xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl mb-3 text-white font-bold">Keunggulan Pasangkayu</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Lokasi strategis dengan pasokan bahan baku kelapa yang sangat melimpah. Akses langsung ke Pelabuhan Pantoloan memangkas biaya logistik ekspor.</p>
+                </div>
+                
+                <div class="glass-card relative overflow-hidden group border-accent/30 bg-accent/5">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"><i class="fas fa-leaf text-6xl text-white"></i></div>
+                    <div class="w-12 h-12 rounded-lg bg-yellow-500/20 flex items-center justify-center mb-6 border border-yellow-500/30">
+                        <i class="fas fa-recycle text-xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl mb-3 text-white font-bold">Margin dari "Zero Waste"</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Pengolahan konvensional membuang sabut dan batok. Model terintegrasi kami mengubah "limbah" ini menjadi dua pendorong margin utama (Briket & Fiber).</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">02</div>
+    </section>
+
+    <!-- Slide 3: Operational Setup (NEW) -->
+    <section class="slide bg-slate-900 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-6xl w-full mx-auto z-10">
+            <div class="mb-10">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Kapasitas 20 Ton/Bulan</span>
+                <h2 class="text-4xl md:text-5xl">Mesin & <span class="text-accent">Tenaga Kerja</span></h2>
+                <p class="text-slate-400 mt-4 max-w-2xl">Operasi *manual-heavy* di hulu untuk menekan CAPEX, dipadukan dengan mesin tepat guna di hilir untuk menjamin kualitas ekspor.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Kebutuhan Mesin -->
+                <div class="glass-card border-t-4 border-t-slate-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-cogs text-2xl text-slate-300"></i>
+                        <h3 class="text-2xl font-bold text-white">Kebutuhan Mesin Utama</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start border-b border-slate-700/50 pb-3">
+                            <div>
+                                <h4 class="text-white font-semibold">Lini Karbonisasi</h4>
+                                <p class="text-xs text-slate-400">Untuk pembakaran batok kelapa</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-sm font-bold text-accent bg-accent/10 px-2 py-1 rounded">10-12 Drum Batch</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-slate-700/50 pb-3">
+                            <div>
+                                <h4 class="text-white font-semibold">Lini Briket (Kapasitas >200kg/hari)</h4>
+                                <p class="text-xs text-slate-400">Hammer mill (penghancur), mixer (pengaduk), extruder (pencetak)</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-sm font-bold text-accent bg-accent/10 px-2 py-1 rounded">1 Set Mesin</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-slate-700/50 pb-3">
+                            <div>
+                                <h4 class="text-white font-semibold">Lini Pengeringan & QC</h4>
+                                <p class="text-xs text-slate-400">Oven pengering briket (blower/pemanas), moisture meter, timbangan</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-sm font-bold text-accent bg-accent/10 px-2 py-1 rounded">1-2 Unit Oven</span>
+                            </div>
+                        </div>
+                         <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-white font-semibold">Lini Sabut (Cocofiber)</h4>
+                                <p class="text-xs text-slate-400">Mesin pengurai sabut sederhana</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-sm font-bold text-accent bg-accent/10 px-2 py-1 rounded">1 Unit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kebutuhan Pekerja -->
+                <div class="glass-card border-t-4 border-t-blue-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-users text-2xl text-blue-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Tenaga Kerja (Fase 3: 20t/bln)</h3>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-6 bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                        <span class="text-slate-300 font-semibold">Total Estimasi Pekerja:</span>
+                        <span class="text-3xl font-bold text-white">16 - 20 <span class="text-lg text-slate-400 font-normal">Orang</span></span>
+                    </div>
+
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-blue-400 mt-1"></i>
+                            <div>
+                                <strong class="text-slate-200 block">Sektor Hulu (Kopra & Karbonisasi)</strong>
+                                <span class="text-sm text-slate-400">Fokus pada pengupasan kelapa, penjemuran kopra, dan penjagaan api drum karbonisasi. (Pekerja lepas/harian).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-blue-400 mt-1"></i>
+                            <div>
+                                <strong class="text-slate-200 block">Sektor Hilir (Produksi Briket)</strong>
+                                <span class="text-sm text-slate-400">Operator mesin penghancur, pencampur adonan, dan pencetak briket. Membutuhkan sedikit keahlian teknis.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-blue-400 mt-1"></i>
+                            <div>
+                                <strong class="text-slate-200 block">QC, Gudang & Pengemasan</strong>
+                                <span class="text-sm text-slate-400">Menjaga standar kualitas (kadar air), penyusunan briket, pengepakan untuk ekspor, dan logistik bahan baku.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">03</div>
+    </section>
+
+    <!-- Slide 4: Risk & Mitigation (NEW) -->
+    <section class="slide bg-slate-800 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-6xl w-full mx-auto z-10">
+            <div class="mb-10 text-center">
+                <span class="text-red-400 text-sm font-bold tracking-widest uppercase mb-2 block">Manajemen Risiko</span>
+                <h2 class="text-4xl md:text-5xl">Mitigasi & <span class="text-accent">Solusi Terukur</span></h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Kami tidak menjanjikan bisnis tanpa risiko. Kami merancang perlindungan sistematis terhadap ancaman utama operasional.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Risk 1: Harga Bahan Baku -->
+                <div class="glass-card flex gap-4">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/30">
+                        <i class="fas fa-coins text-red-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Fluktuasi Harga Kelapa Naik</h3>
+                        <p class="text-sm text-slate-400 mb-3">Risiko margin kopra tertekan jika harga buah kelapa mentah melonjak tinggi di pasaran lokal.</p>
+                        <div class="bg-slate-900/50 p-3 rounded-lg border-l-2 border-accent">
+                            <span class="text-xs font-bold text-accent block mb-1">SOLUSI:</span>
+                            <p class="text-xs text-slate-300">Model *Waste-to-Value*. Margin utama bukan dari kopra, tapi Briket. Kopra berfungsi sebagai jangkar untuk mendapatkan batok murah. Stress-test kami membuktikan bisnis masih layak meski harga kelapa sentuh Rp3.500/butir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk 2: Cuaca -->
+                <div class="glass-card flex gap-4">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
+                        <i class="fas fa-cloud-rain text-blue-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Musim Hujan (Cuaca Ekstrem)</h3>
+                        <p class="text-sm text-slate-400 mb-3">Menghambat penjemuran kopra dan pengeringan batok, menyebabkan produksi tersendat atau kadar air briket tinggi.</p>
+                        <div class="bg-slate-900/50 p-3 rounded-lg border-l-2 border-accent">
+                            <span class="text-xs font-bold text-accent block mb-1">SOLUSI:</span>
+                            <p class="text-xs text-slate-300">Investasi pada 1-2 unit mesin oven pengering tertutup untuk briket akhir (tidak bergantung matahari). Menyediakan gudang/area tertutup beratap (shelter) untuk stok batok kering eksternal agar aman dari hujan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk 3: Pasokan Batok Eksternal -->
+                <div class="glass-card flex gap-4">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/30">
+                        <i class="fas fa-truck-loading text-yellow-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Kelangkaan Batok Eksternal</h3>
+                        <p class="text-sm text-slate-400 mb-3">Untuk briket 20 ton, pasokan batok dari kopra internal hanya penuhi ~20%. Sisanya sangat bergantung pengepul.</p>
+                        <div class="bg-slate-900/50 p-3 rounded-lg border-l-2 border-accent">
+                            <span class="text-xs font-bold text-accent block mb-1">SOLUSI:</span>
+                            <p class="text-xs text-slate-300">Mengikat kontrak volume dengan minimal 3-5 pemasok aktif di awal. Menetapkan standar *quality control* ketat (kadar air & kebersihan) di depan pabrik. Selalu miliki cadangan kas (*cash buffer*) untuk beli tunai.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk 4: Kualitas & Ekspor -->
+                <div class="glass-card flex gap-4">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
+                        <i class="fas fa-ship text-purple-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Penolakan Kualitas / Harga FOB Turun</h3>
+                        <p class="text-sm text-slate-400 mb-3">Buyer menolak pengiriman karena kadar abu tinggi atau briket retak. Atau harga pasar ekspor turun tiba-tiba.</p>
+                        <div class="bg-slate-900/50 p-3 rounded-lg border-l-2 border-accent">
+                            <span class="text-xs font-bold text-accent block mb-1">SOLUSI:</span>
+                            <p class="text-xs text-slate-300">Pendekatan *Ramp-up*. Fase 1 (5 ton) murni untuk *pilot project* dan validasi sampel buyer. Produksi masal tidak digas sebelum spek disetujui. Kadar abu dijaga ketat di tahap karbonisasi (SOP pembakaran drum).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">04</div>
+    </section>
+
+    <!-- Slide 5: Supply Chain Reality -->
+    <section class="slide bg-slate-900 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-5xl w-full mx-auto z-10">
+            <div class="mb-12">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Skema Pasokan (Fase 3: 20 Ton)</span>
+                <h2 class="text-4xl md:text-5xl">Anatomi <span class="text-accent">Bahan Baku</span></h2>
+            </div>
+            
+            <div class="glass-card p-8 bg-slate-800/80 border-slate-600">
+                <!-- Visual Flow -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative gap-6 md:gap-2">
+                    
+                    <!-- Kiri: Kelapa Hulu -->
+                    <div class="w-full md:w-1/4 flex flex-col items-center">
+                        <div class="w-24 h-24 rounded-full border-4 border-slate-600 flex items-center justify-center mb-3 bg-slate-800 z-10">
+                            <div class="text-center">
+                                <span class="block text-xl font-bold text-white">90-100k</span>
+                                <span class="block text-xs text-slate-400">Butir Kelapa</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-down md:fa-arrow-right text-slate-500 my-2 md:my-0 md:mx-4"></i>
+                        <div class="text-center p-3 border border-slate-600 rounded bg-slate-800 w-full">
+                            <span class="block font-bold text-white">Kopra: 20 Ton</span>
+                            <span class="text-xs text-slate-400">(Produksi Internal)</span>
+                        </div>
+                    </div>
+
+                    <!-- Tengah: Sumber Batok -->
+                    <div class="w-full md:w-2/4 flex flex-col gap-4 relative">
+                        <div class="flex items-center justify-between p-4 border border-slate-600 rounded bg-slate-800/50">
+                            <div>
+                                <span class="block text-sm text-slate-400">Sumber Internal</span>
+                                <span class="block font-bold text-white">Batok dari Kopra</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xl font-bold text-slate-300">9 - 15 Ton</span>
+                                <span class="block text-xs font-bold text-slate-500">~20% Kebutuhan</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-center">
+                            <div class="bg-slate-700 rounded-full p-2"><i class="fas fa-plus text-slate-300"></i></div>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 border border-accent/50 rounded bg-accent/5 shadow-[0_0_15px_rgba(34,197,94,0.1)]">
+                            <div>
+                                <span class="block text-sm text-accent">Sumber Eksternal (Krusial)</span>
+                                <span class="block font-bold text-white">Batok Pengepul</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xl font-bold text-accent">52 - 58 Ton</span>
+                                <span class="block text-xs font-bold text-accent">~80% Kebutuhan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kanan: Output Briket -->
+                    <div class="w-full md:w-1/4 flex flex-col items-center">
+                        <i class="fas fa-arrow-down md:fa-arrow-right text-slate-500 my-2 md:my-0 md:mx-4 hidden md:block"></i>
+                        <div class="w-32 h-32 rounded-full border-4 border-accent flex items-center justify-center mt-3 md:mt-0 bg-slate-800 z-10 shadow-[0_0_25px_rgba(34,197,94,0.2)]">
+                            <div class="text-center">
+                                <span class="block text-3xl font-bold text-accent">20 Ton</span>
+                                <span class="block text-sm font-bold text-white">Briket Arang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-slate-400 mt-6"><i class="fas fa-info-circle mr-1"></i> Asumsi rendemen karbonisasi 30%. Model bisnis ini adalah pengolahan kopra yang bertumpu pada keandalan jaringan pemasok batok eksternal.</p>
+        </div>
+        <div class="slide-number">05</div>
+    </section>
+
+    <!-- Slide 6: Financials & BEP (NEW) -->
+    <section class="slide bg-slate-800 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-6xl w-full mx-auto z-10">
+            <div class="mb-10 text-center">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Jalur Menuju Balik Modal</span>
+                <h2 class="text-4xl md:text-5xl">Kalkulasi <span class="text-accent">Profit & BEP</span></h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Bagaimana modal Rp500 Juta kembali dalam ±3 tahun? Berikut adalah rincian proyeksi konservatif kami tanpa menghitung penjualan cocofiber/cocopeat.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Kiri: Laba per Bulan -->
+                <div class="glass-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-calculator text-2xl text-accent"></i>
+                        <h3 class="text-2xl font-bold text-white">Proyeksi Laba (Kapasitas 20 Ton)</h3>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between items-center border-b border-slate-700/50 pb-2">
+                            <span class="text-slate-300"><i class="fas fa-plus text-green-500 mr-2 text-xs"></i> Margin Briket Ekspor</span>
+                            <span class="font-semibold text-green-400">Rp 162.500.000</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-700/50 pb-2">
+                            <span class="text-slate-300"><i class="fas fa-minus text-red-500 mr-2 text-xs"></i> Defisit Kopra (Subsidi Bahan Baku)</span>
+                            <span class="font-semibold text-red-400">- Rp 45.000.000</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-700/50 pb-2">
+                            <span class="text-slate-300"><i class="fas fa-minus text-red-500 mr-2 text-xs"></i> Biaya Operasional (OPEX)</span>
+                            <span class="font-semibold text-red-400">- Rp 65.000.000</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-white font-bold text-lg">Laba Bersih Operasional</span>
+                            <span class="font-bold text-xl text-white">Rp 52.500.000 <span class="text-sm font-normal text-slate-400">/bln</span></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-4 flex justify-between items-center shadow-[0_0_20px_rgba(34,197,94,0.1)]">
+                        <div>
+                            <span class="text-green-400 font-bold block mb-1">Hak Investor (60%)</span>
+                            <span class="text-xs text-slate-400">Skema sebelum BEP tercapai</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-3xl font-extrabold text-white">Rp 31,5 Jt</span>
+                            <span class="text-sm text-slate-400 block">/ bulan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kanan: Timeline 3 Tahun -->
+                <div class="glass-card border-t-4 border-t-slate-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-hourglass-half text-2xl text-slate-300"></i>
+                        <h3 class="text-2xl font-bold text-white">Timeline Payback (±33 Bulan)</h3>
+                    </div>
+                    
+                    <div class="relative border-l-2 border-slate-700 ml-4 space-y-6 pb-4">
+                        <!-- Bulan 1-6 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-700 border-2 border-slate-900"></div>
+                            <h4 class="text-white font-bold mb-1">Bulan 1 - 6 (Fase 1: 5 Ton)</h4>
+                            <p class="text-sm text-slate-400 mb-2">Fokus validasi kualitas (QC) dan pengiriman sampel ke *buyer*. Mesin disesuaikan. Laba masih minus/sangat tipis.</p>
+                            <span class="inline-block px-2 py-1 bg-slate-800 rounded text-xs text-slate-300 font-semibold border border-slate-700">Akumulasi Dividen: ~Rp 0</span>
+                        </div>
+
+                        <!-- Bulan 7-12 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-slate-900 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                            <h4 class="text-white font-bold mb-1">Bulan 7 - 12 (Fase 2: 10 Ton)</h4>
+                            <p class="text-sm text-slate-400 mb-2">Operasi komersial awal. Kas positif mulai terbentuk. Hak investor ±Rp 8,2 Juta/bulan.</p>
+                            <span class="inline-block px-2 py-1 bg-blue-900/30 text-blue-300 rounded text-xs font-semibold border border-blue-800/50">Akumulasi s/d Bln 12: ±Rp 49 Juta</span>
+                        </div>
+
+                        <!-- Bulan 13-33 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-accent border-2 border-slate-900 shadow-[0_0_15px_rgba(34,197,94,0.5)]"></div>
+                            <h4 class="text-white font-bold mb-1">Bulan 13 - 33 (Fase 3: 15-20 Ton)</h4>
+                            <p class="text-sm text-slate-400 mb-2">Skala penuh tercapai. Setoran ke investor stabil di angka ±Rp 25 - 31,5 Juta/bulan.</p>
+                            <span class="inline-block px-2 py-1 bg-accent/20 text-green-300 rounded text-xs font-bold border border-accent/30 text-lg">BEP Tercapai: Total Rp 500 Juta+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">06</div>
+    </section>
+
+    <!-- Slide 7: Enhanced Team Slide -->
+    <section class="slide bg-slate-900 relative">
+        <div class="bg-pattern"></div>
+        <div class="max-w-6xl w-full mx-auto z-10 text-center">
+            <div class="mb-12">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase mb-2 block">Fondasi Eksekusi</span>
+                <h2 class="text-4xl md:text-5xl">Tim <span class="text-accent">Pendiri</span></h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Kombinasi pengalaman teknis lapangan, jaringan pasokan lokal yang mengakar, dan pemahaman tata kelola bisnis B2B.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Rahmat -->
+                <div class="glass-card text-left p-6">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg mb-6 flex items-center justify-center text-2xl text-slate-300 border border-slate-600"><i class="fas fa-cogs"></i></div>
+                    <h3 class="text-xl font-bold text-white">Rahmat</h3>
+                    <p class="text-accent text-sm font-semibold mb-4 border-b border-slate-700/50 pb-2">Manajer Operasi & Produksi</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span>Bertanggung jawab atas jalannya mesin, *quality control* kadar abu & air, dan manajemen shift pekerja harian.</span></li>
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span class="text-slate-400 italic">"Memiliki pengalaman teknis dalam standar operasional pembakaran arang/karbonisasi."</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Jerry -->
+                <div class="glass-card text-left p-6">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg mb-6 flex items-center justify-center text-2xl text-slate-300 border border-slate-600"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold text-white">Jerry</h3>
+                    <p class="text-accent text-sm font-semibold mb-4 border-b border-slate-700/50 pb-2">Komersial & Keuangan</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span>Mengelola arus kas, *pricing* briket, mencari *buyer* ekspor/forwarder, dan menyusun laporan untuk investor.</span></li>
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span class="text-slate-400 italic">"Berpengalaman dalam administrasi B2B, sales, dan manajemen finansial proyek."</span></li>
+                    </ul>
+                </div>
+
+                <!-- Fahmi -->
+                <div class="glass-card text-left p-6">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg mb-6 flex items-center justify-center text-2xl text-slate-300 border border-slate-600"><i class="fas fa-handshake"></i></div>
+                    <h3 class="text-xl font-bold text-white">Fahmi</h3>
+                    <p class="text-accent text-sm font-semibold mb-4 border-b border-slate-700/50 pb-2">Manajer Rantai Pasok</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span>Ujung tombak pengadaan bahan baku. Mengamankan kontrak pengepul batok dan menjaga pasokan kelapa stabil.</span></li>
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span class="text-slate-400 italic">"Paham medan, memiliki relasi akar rumput yang kuat dengan petani & pengepul lokal Pasangkayu."</span></li>
+                    </ul>
+                </div>
+
+                <!-- Mark -->
+                <div class="glass-card text-left p-6">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg mb-6 flex items-center justify-center text-2xl text-slate-300 border border-slate-600"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="text-xl font-bold text-white">Mark</h3>
+                    <p class="text-accent text-sm font-semibold mb-4 border-b border-slate-700/50 pb-2">Project & Legal Support</p>
+                    <ul class="text-sm text-slate-300 space-y-2">
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span>Mengurus perizinan badan usaha (PT), legalitas pabrik, pengawasan CAPEX, dan kepatuhan lingkungan.</span></li>
+                        <li class="flex gap-2"><i class="fas fa-caret-right text-slate-500 mt-1"></i> <span class="text-slate-400 italic">"Memiliki rekam jejak dalam setup proyek awal dan penyelesaian birokrasi."</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">07</div>
+    </section>
+
+    <!-- Slide 8: Closing / Call to Action -->
+    <section class="slide bg-slate-800 relative text-center">
+        <div class="bg-pattern"></div>
+        <div class="max-w-3xl w-full mx-auto z-10">
+            <h2 class="text-5xl md:text-6xl mb-6 font-extrabold tracking-tight">Mari Tumbuh <span class="text-accent">Bersama</span></h2>
+            <p class="text-xl text-slate-300 mb-10 leading-relaxed font-light">
+                Eksekusi terukur. Manajemen risiko transparan. Tata kelola jelas. <br>Kami mencari mitra <strong>Rp500 Juta</strong> untuk merealisasikan blueprint komoditas ini.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-green-500 hover:bg-green-400 text-slate-900 font-bold py-4 px-8 rounded-full transition duration-300 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fas fa-file-invoice-dollar"></i> Diskusikan Proyeksi Finansial
+                </button>
+                <button class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fas fa-file-contract"></i> Draft Perjanjian & Legal
+                </button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
